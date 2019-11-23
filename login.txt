@@ -1,6 +1,0 @@
-FileZilla Login:
-Host: freetzi.com
-Username: blackbenzwhitebenz.freetzi.com
-Password: corysan1
-Port: 21
-"Quickconnect"
