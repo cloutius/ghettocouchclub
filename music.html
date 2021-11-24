@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -10,7 +12,7 @@
 	<link rel="icon" 
       type="image/png" 
       href="assets/images/ghettocouch.png">
-    <title>GALLERY</title>
+    <title>MUSIC</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,39 +21,47 @@
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/tooplate-main.css">
+    <link rel="stylesheet" href="assets/css/flex-slider.css">
   </head>
 <style>
-@media only screen
- and (min-device-width: 1024px)
- and (max-device-width: 1024px)
- and (orientation: portrait)
- and (-webkit-min-device-pixel-ratio: 2) {
-</style>
-<style>
-* {
-  box-sizing: border-box;
+.container {
+  position: relative;
+  width: 50%;
 }
 
-.header {
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   text-align: center;
-  padding: 32px;
 }
 
-/* Create two equal columns that sits next to each other */
-.column {
-  -ms-flex: 50%; /* IE 10 */
-  flex: 50%;
-  padding: 0 4px;
+.container:hover .image {
+  opacity: 0.3;
 }
 
-.column img {
-  margin-top: 8px;
-  vertical-align: center;
+.container:hover .middle {
+  opacity: 1;
 }
-.city {
-  margin: 20px;
-  padding: 20px;
-]
+
+.text {
+  color: black;
+  font-size: 16px;
+  padding: 16px 32px;
+}
 </style>
   <body>
     <!-- Navigation -->
@@ -65,7 +75,7 @@
           <ul class="navbar-nav ml-auto">
 			</li>
 			<li class="nav-item active">
-              <a class="nav-link" href="gallery.html">📸</a>
+              <a class="nav-link" href="gallery.html" >📸</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="products.html">📦</a>
@@ -93,42 +103,15 @@
       </div>
     </nav>
 
-    <!-- Banner Starts Here -->
-  <li><a></a></li>
-  <div class="city"> 
-  <div class="column">
-  <img src="assets/images/picture1.jpg" style="width:100%;">
-  <img src="assets/images/picture2.jpg" style="width:100%;">
-  <img src="assets/images/picture3.jpg" style="width:100%;">
-  <img src="https://i.giphy.com/media/vMiuSmdLuW0ewYhws1/giphy.webp" style="width:100%;">
-  <img src="assets/images/picture8.jpg" style="width:100%;">
-  <a style="font-size:0.7vw";> me , lorenzo , & joey </a>
-  <img src="assets/images/picture9.jpg" style="width:100%;">
-  <a style="font-size:0.7vw";> senior trip </a>
-  <video style="width:100%;" controls>
-  <source src="assets/images/masks.mp4" type="video/mp4">
-  </video>
-  </div>
-  <div class="column">
-  <img src="assets/images/picture7.jpg" style="width:100%;">
-</audio>
-  <img src="assets/images/picture5.png" style="width:100%;">
-  <a style="font-size:0.7vw";> field trip </a>
-  <img src="assets/images/picture6.jpg" style="width:100%;">
-  
-  <audio controls autoplay>
-  <source src="assets/images/nofun.mp3" type="audio/mpeg">
-</audio>
-  <img src="assets/images/picture4.jpg" style="width:100%;">
-  <a style="font-size:0.7vw";> me & connor </a>
-  </div>  
-  <div class="column">
-  </div>
-  <div class="column">
-  </div>
-</div>
-    <!-- Banner Ends Here -->
-
+            <!--img src="assets/images/cassette.gif" alt="Cassette" class="center"-->
+			
+<div class="container">
+  <a href="volume1.html">
+    <img src="assets/images/cassette.gif" alt="mixtape1" class="image" style="width:100%" >
+<div class="middle">
+    <div class="text">volume: 1</div>
+	</div>
+	</div>
     <!-- Sub Footer Starts Here -->
     <div class="sub-footer">
       <div class="container">
@@ -142,18 +125,5 @@
       </div>
     </div>
     <!-- Sub Footer Ends Here -->
-	
-	<script>
-// Get the elements with class="column"
-var elements = document.getElementsByClassName("column");
-
-// Two images side by side
-function two() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.msFlex = "50%";  // IE10
-    elements[i].style.flex = "50%";
-  }
-}
-</script>
   </body>
 </html>
